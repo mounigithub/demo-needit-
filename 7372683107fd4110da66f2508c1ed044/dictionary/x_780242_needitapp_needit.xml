@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="needit" max_length="40" name="x_780242_needitapp_needit" sizeclass="0" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="human resources"/>
+                <element inactive="true" inactive_on_update="true" label="Human resources HR" sequence="0" value="human resources hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive="true" inactive_on_update="true" label="Your department choice" sequence="1" value="your department choice"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal 2" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="hr1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="Human Resources 1" sequence="0" value="human resources 1"/>
+                <element inactive="true" inactive_on_update="true" label="hr2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="Human Resources 2" sequence="1" value="human resources 2"/>
+                <element inactive="true" inactive_on_update="true" label="facilities 1" sequence="2" value="facilities 1"/>
+                <element inactive="true" inactive_on_update="true" label="facilities 2" sequence="3" value="facilities 2"/>
+                <element inactive="true" inactive_on_update="true" label="legal 1" sequence="4" value="legal 1"/>
+                <element inactive="true" inactive_on_update="true" label="legal 2" sequence="5" value="legal 2"/>
+                <element inactive_on_update="false" label="Your Department Choice 1" sequence="6" value="your department choice 1"/>
+                <element inactive_on_update="false" label="Your Department Choice 2" sequence="7" value="your department choice 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="calendar_date_time"/>
+    </element>
+</database>
